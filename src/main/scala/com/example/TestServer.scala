@@ -23,6 +23,7 @@ object TestServer extends TwitterServer {
 
       log.info(s"request received - id: ${id}, counter: ${counterMap(id)}")
 
+      Thread.sleep(10 * 1000)
       counter.incr()
       Future.value(response)
     }
